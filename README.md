@@ -6,7 +6,7 @@ API Documentation for the MasterBase challenge.
 
 To install and run the API, follow these steps:
 
-- git clone https://github.com/tu-repositorio/tu-proyecto.git
+- git clone https://github.com/SerapioUnlucky/challenge-masterbase.git
 - cd challenge-masterbase
 - npm install o yarn install
 - npm run dev o yarn dev

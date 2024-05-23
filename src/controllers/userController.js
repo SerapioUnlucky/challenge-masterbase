@@ -165,7 +165,7 @@ const user = async (db, req, res) => {
 
     try {
 
-        const id = new ObjectId(req.params.id);
+        const id = ObjectId.createFromHexString(req.params.id);
 
         logger.trace(`Buscando al usuario de id ${id} en la base de datos`);
         const user = await method.findOne(db, collection, { _id: id });
@@ -203,7 +203,7 @@ const deleted = async (db, req, res) => {
 
     try {
 
-        const id = new ObjectId(req.params.id);
+        const id = ObjectId.createFromHexString(req.params.id);
 
         logger.trace(`Buscando al usuario de id ${id} en la base de datos`);
         const user = await method.findOne(db, collection, { _id: id });
@@ -244,7 +244,7 @@ const update = async (db, req, res) => {
 
     try {
 
-        const id = new ObjectId(req.params.id);
+        const id = ObjectId.createFromHexString(req.params.id);
         const params = req.body;
         const keys = Object.keys(params);
 

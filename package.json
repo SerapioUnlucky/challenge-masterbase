@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "node --watch src/index.js | pino-pretty"
+    "dev": "node --watch src/index.js | pino-pretty",
+    "test": "jest"
   },
   "dependencies": {
-    "-": "^0.0.1",
+    "-": "0.0.1",
     "bcrypt": "5.1.1",
     "express": "4.19.2",
     "joi": "17.13.1",
@@ -15,5 +16,9 @@
     "mongodb": "6.6.2",
     "pino": "9.1.0",
     "pino-pretty": "11.0.0"
+  },
+  "devDependencies": {
+    "jest": "29.7.0",
+    "supertest": "7.0.0"
   }
 }

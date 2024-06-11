@@ -1,8 +1,8 @@
 {
     "database": {
-        "host": "monguito/27017",
+        "host": "monguito:27017",
         "name": "prueba",
-        "username": "seba",
+        "username": "root",
         "password": "password",
         "port": 3000
     }

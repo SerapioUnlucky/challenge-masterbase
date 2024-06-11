@@ -6,12 +6,10 @@ const fs = require('fs');
 const path = require('path');
 const app = express();
 
-// Parte del error con el path con docker
 const root = process.cwd();
-const Path = path.join(root, 'src/config.json'); 
+const Path = path.join(root, 'src/config.json');
 const config = JSON.parse(fs.readFileSync(Path, 'utf8'));
 const { host, name, username, password, port } = config.database;
-// Fin de la parte del error
 
 app.use(express.json());
 app.use(pino);

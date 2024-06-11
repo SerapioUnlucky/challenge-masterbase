@@ -8,24 +8,28 @@ To install and run the API, follow these steps:
 
 - git clone https://github.com/SerapioUnlucky/challenge-masterbase.git
 - cd challenge-masterbase
-- npm install o yarn install
-- npm run dev o yarn dev
+- npm install
+- npm run dev
 
 # Docker commands
+
+## Red command
+
+-   docker network create masterbase
 
 ## Mongo container
 
 - docker pull mongo
-- docker create -p27017:27017 --name monguito --network mired -e MONGO_INITDB_ROOT_USERNAME=seba -e MONGO_INITDB_ROOT_PASSWORD=password mongo
+- docker create -p27017:27017 --name monguito --network masterbase -e MONGO_INITDB_ROOT_USERNAME=root -e MONGO_INITDB_ROOT_PASSWORD=password mongo
 - docker start monguito
 
-## Challenge container
+## API container
 
 - docker build -t masterbase:1 .
-- docker create -p3000:3000 --name masterbase --network mired masterbase:1
+- docker create -p3000:3000 --name masterbase --network masterbase masterbase:1
 - docker start masterbase
 
-# Rutas de la API
+# API Routes
 
 ## GET / Users
 
